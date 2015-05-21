@@ -1,0 +1,71 @@
+# https://wiki.archlinux.org/index.php/Color_Bash_Prompt
+#PS1="\$(if [[ \$? == 0 ]]; then echo \"\[\033[1;32m\]\342\234\223\"; else echo \"\[\033[1;31m\]\342\234\227\"; fi) \[\e[1;31m\]\u\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] "
+PS1="\$(if [[ \$? == 0 ]]; then echo \"\[\033[1;32m\]\342\234\223\"; else echo \"\[\033[1;31m\]\342\234\227\"; fi) \[\e[1;31m\]\W\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] "
+
+alias ls="ls --color"
+alias l=ls
+alias ll="ls -l -h"
+alias lt="ls -ltrh"
+alias +=pushd
+alias n="nautilus"
+alias nn="nautilus ."
+alias cl=clear
+alias x=xview
+alias d=display
+alias v='gvim -geometry 110x50'
+alias vi=vim # vim is version 7.X
+alias m=more
+alias c=cd
+alias f="find -name"
+alias clc=clear
+alias grep='grep --color=auto'
+alias mk="make"
+
+alias   ..='cd ..'
+alias  ...='cd ../..'
+alias ....='cd ../../..'
+
+alias     u='cd ..'
+alias    uu='cd ../..'
+alias   uuu='cd ../../..'
+alias  uuuu='cd ../../../..'
+alias uuuuu='cd ../../../../..'
+
+alias u2='cd ../..'
+alias u3='cd ../../..'
+alias u4='cd ../../../..'
+alias u5='cd ../../../../..'
+
+alias branch="git branch"
+alias br="git branch"
+alias checkout="git checkout"
+alias cho="git checkout"
+alias status="git status"
+alias sta="git status"
+alias add="git add"
+alias commit="git commit"
+alias amend="git commit --amend"
+alias rebase="git rebase"
+alias reb="git rebase"
+alias rebi="git rebase -i"
+alias cherry="git cherry-pick"
+alias mergetool="git mergetool"
+alias gclean="git clean -dxf"
+alias log="git log"
+alias gol="git log --oneline"
+alias gh="git log --oneline | head -n 6"
+alias gg="git gui &"
+alias gk="gitk --all &"
+
+alias extract_functions="ctags -x --c-kinds=fp"
+alias extract_macros="ctags -x --c-kinds=d"
+alias extract_types="ctags -x --c-kinds=estu"
+
+alias grep_in_makefiles="find -name \"Makefile*\" -o -name \"*.mk\" | xargs -n 1 grep --colour -H"
+
+# complete -W 'add diff branch checkout commit merge grep status log rebase cherry-pick' git
+# complete -W 'init sync upload diff download prune start status branch abandon' repo
+
+
+
+

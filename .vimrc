@@ -1,4 +1,3 @@
-
 colorscheme desert
 
 set nocompatible  " use VIM settings instead of VI settings
@@ -28,6 +27,8 @@ set ai  " autoindent
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+"highlight column 120, code should be before this line
+set cc=120
 
 " line wrapping
 set wrap
@@ -45,7 +46,7 @@ set nowritebackup
 " search things
 set hlsearch "highlight search
 set incsearch "find next match as you type
-map \l :noh<CR>  "press \l to remove search highlighting
+map \l :noh<CR>
 set ignorecase
 set smartcase
 
@@ -56,7 +57,8 @@ set splitbelow
 set laststatus=2 "show status line
 set history=1000
 
-"set guifont=B\&H\ LucidaTypewriter\ 12
+" set guifont=Monospace\ 14
+set guifont=Hack\ 14
 
 " move in a sane manner thru wrapped lines
 nmap j gj
@@ -76,7 +78,12 @@ nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
 nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
+noremap zz :update<CR>
 
-" source ~/.vim/plugin/cscope_maps.vim
 
 
+
+source ~/.vim/plugin/cscope_maps.vim
+
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>

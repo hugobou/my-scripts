@@ -14,8 +14,6 @@ done
 
 ```
 
-
-
 ## Vim RC
 
 These are settings for Vim/Gvim. For convenience you can create a symbolic link between the file in the repo and the actual .vimrc.
@@ -24,3 +22,6 @@ These are settings for Vim/Gvim. For convenience you can create a symbolic link 
 ln -s <PATH_TO_REPO>/vimrc/vimrc .vimrc
 ```
 
+## notes.py
+
+A small tool to create Markdown notes.

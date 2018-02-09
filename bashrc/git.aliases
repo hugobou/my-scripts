@@ -1,0 +1,40 @@
+alias branch="git branch"
+alias br='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD) %(color:yellow)%(refname:short)%(color:reset)|%(color:red)%(objectname:short)%(color:reset)|%(contents:subject)|(%(color:green)%(committerdate:relative)%(color:reset))" | 	awk -F "|" "{printf \"%-30s %s  %-70s %s\n\", \$1, \$2, \$3, \$4}"'
+alias checkout="git checkout"
+alias cho="git checkout"
+alias status="git status"
+alias sta="git status"
+alias add="git add"
+alias commit="git commit"
+alias amend="git commit --amend"
+alias rebase="git rebase"
+alias reb="git rebase"
+alias rebi="git rebase -i"
+alias cherry="git cherry-pick"
+alias mergetool="git mergetool"
+alias gclean="git clean -dxf"
+alias log="git log"
+alias gol="git log --oneline"
+alias gh="git log --oneline | head -n 6"
+alias gg="git gui &"
+alias gk="gitk --all &"
+alias gclean='git clean -dxf'
+alias gdiff='git diff'
+alias ghh='git log --oneline | head -n 16'
+alias gsf='git diff-tree --no-commit-id --name-only -r'
+alias gsh='git show HEAD'
+alias log='git log --no-merges'
+alias gol='git log --oneline --no-merges'
+alias golg='git log --oneline --graph --decorate'
+alias golga='git log --oneline --graph --decorate --all'
+alias rebiom='git rebase -i origin/master'
+alias rebom='git rebase origin/master'
+alias gf='git ls-files'
+
+alias gfind_cfiles='git ls-files "*.[ch]" -o -name "*.[ch]pp"'
+alias gfind_hfiles='git ls-files "*.h -o -name "*.hpp""'
+alias gfind_txtfiles='git ls-files "*.txt"'
+alias gfind_makefiles='git ls-files "*Makefile*" -o -name "*.mk"'
+alias gfind_pyfiles='git ls-files "*.py"'
+alias gfind_shfiles='git ls-files "*.sh"'
+

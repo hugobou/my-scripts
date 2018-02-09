@@ -1,0 +1,5 @@
+alias extract_functions="ctags -x --c-kinds=fp"
+alias extract_macros="ctags -x --c-kinds=d"
+alias extract_types="ctags -x --c-kinds=estu"
+
+

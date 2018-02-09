@@ -1,0 +1,41 @@
+alias h='history | grep'
+alias l='ls'
+alias s='ls'
+alias la='ls -la -h'
+alias ll='ls -l -h'
+alias ss='ls -l -h'
+alias ls='ls --color'
+alias ls-l='ls -l'
+alias lt='ls -ltrh'
+alias +=pushd
+alias n="nautilus"
+alias nn="nautilus ."
+alias cl=clear
+alias x=xview
+alias d=display
+alias vi=vim
+alias m=more
+alias c=cd
+alias grep='grep --color=auto'
+alias mk="make"
+
+alias xn1="xargs -n 1"
+alias tree="tree --dirsfirst"
+alias cdpwd='cd `pwd`'
+
+alias   ..='cd ..'
+alias  ...='cd ../..'
+alias ....='cd ../../..'
+
+alias     u='cd ..'
+alias    uu='cd ../..'
+alias   uuu='cd ../../..'
+alias  uuuu='cd ../../../..'
+alias uuuuu='cd ../../../../..'
+
+alias u2='cd ../..'
+alias u3='cd ../../..'
+alias u4='cd ../../../..'
+alias u5='cd ../../../../..'
+
+alias svndiff='svn diff --force | colordiff | less -r'

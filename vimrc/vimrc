@@ -80,10 +80,7 @@ nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 noremap zz :update<CR>
 
-
-
-
-source ~/.vim/plugin/cscope_maps.vim
+" source ~/.vim/plugin/cscope_maps.vim
 
 inoremap <Char-0x07F> <BS>
 nnoremap <Char-0x07F> <BS>

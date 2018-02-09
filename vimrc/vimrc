@@ -70,8 +70,8 @@ map <C-k> <C-W>k<C-W>_
 map <C-h> <C-W>h<C-W>_
 map <C-l> <C-W>l<C-W>_
 
-
-
+" By default use 4 spaces per tab
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 " switch between tab modes
 nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>

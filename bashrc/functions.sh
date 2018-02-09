@@ -1,7 +1,7 @@
 # Launch gvim if running X and gvim is installed
 # otherwise launch vim.
 function v() {
-	if [ "$DISPLAY" && `which gvim` ]; then
+	if [[ "$DISPLAY" && `command -v gvim` ]]; then
 		gvim -geometry 128x50 -p $*
 	else
 		vim $*
@@ -10,7 +10,7 @@ function v() {
 
 function fv()
 {
-	if [ "$DISPLAY" && `which gvim` ]; then
+	if [[ "$DISPLAY" && `command -v gvim` ]]; then
 		ED=gvim
 	else
 		ED=vim

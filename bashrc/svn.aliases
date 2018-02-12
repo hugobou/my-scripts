@@ -1,0 +1,3 @@
+alias svndiff='svn diff --force | colordiff | less -r'
+alias svntodo='svndiff | grep TODO'
+

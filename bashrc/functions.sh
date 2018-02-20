@@ -10,12 +10,17 @@ function v() {
 
 function fv()
 {
+# https://superuser.com/questions/336016/invoking-vi-through-find-xargs-breaks-my-terminal-why
 	if [[ "$DISPLAY" && `command -v gvim` ]]; then
 		ED=gvim
 	else
 		ED=vim
 	fi
-	find -name "$1" -print -quit | xargs -n 1 $ED
+    if [[ "$ED" == "vim" ]]; then
+        find -name "$1" -print -quit | xargs bash -c '</dev/tty vim "$@"' ignoreme
+    else
+    	find -name "$1" -print -quit | xargs -n 1 $ED
+    fi
 }
 
 function md ()

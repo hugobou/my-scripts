@@ -1,26 +1,30 @@
 # Launch gvim if running X and gvim is installed
 # otherwise launch vim.
+
+# https://superuser.com/questions/336016/invoking-vi-through-find-xargs-breaks-my-terminal-why
+# ED="bash -c '</dev/tty vim "$@"' ignoreme"
+function get_editor() {
+    if [[ "$DISPLAY" && `command -v gvim` ]]; then
+        ED="gvim -geometry 128x50 -p"
+    else
+        ED="vim"
+    fi
+    echo $ED
+}
+
 function v() {
-	if [[ "$DISPLAY" && `command -v gvim` ]]; then
-		gvim -geometry 128x50 -p $*
-	else
-		vim $*
-	fi
+    $(get_editor) $*
+}
+
+function f() {
+    for ext in $*; do
+        find -name $ext
+    done
 }
 
 function fv()
 {
-# https://superuser.com/questions/336016/invoking-vi-through-find-xargs-breaks-my-terminal-why
-	if [[ "$DISPLAY" && `command -v gvim` ]]; then
-		ED=gvim
-	else
-		ED=vim
-	fi
-    if [[ "$ED" == "vim" ]]; then
-        find -name "$1" -print -quit | xargs bash -c '</dev/tty vim "$@"' ignoreme
-    else
-    	find -name "$1" -print -quit | xargs -n 1 $ED
-    fi
+    $(get_editor) $(f $*)
 }
 
 function md ()

@@ -7,7 +7,7 @@ function get_editor() {
     if [[ "$DISPLAY" && `command -v gvim` ]]; then
         ED="gvim -geometry 128x50 -p"
     else
-        ED="vim"
+        ED="vim -p"
     fi
     echo $ED
 }

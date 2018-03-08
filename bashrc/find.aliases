@@ -3,6 +3,7 @@ alias fd="find -type d"
 alias find_cfiles='find -name "*.[ch]" -o -name "*.[ch]pp"'
 alias find_hfiles='find -name "*.h" -o -name "*.hpp"'
 alias find_logfiles='find -name "*.log"'
+alias find_javafiles='find -name "*.java"'
 alias find_txtfiles='find -name "*.txt"'
 alias find_makefiles='find -name "*Makefile*" -o -name "*.mk"'
 alias find_pyfiles='find -name "*.py"'

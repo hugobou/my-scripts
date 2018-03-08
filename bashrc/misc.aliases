@@ -18,6 +18,7 @@ alias m=more
 alias c=cd
 alias grep='grep --color=auto'
 alias mk="make"
+alias atom="atom -n"
 
 alias xn1="xargs -n 1"
 alias tree="tree --dirsfirst"

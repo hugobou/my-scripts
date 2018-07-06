@@ -9,7 +9,7 @@ alias ls-l='ls -l'
 alias lt='ls -ltrh'
 alias +=pushd
 alias n="nautilus"
-alias nn="nautilus ."
+alias nn="nautilus . &"
 alias cl=clear
 alias x=xview
 alias d=display
@@ -19,6 +19,8 @@ alias c=cd
 alias grep='grep --color=auto'
 alias mk="make"
 alias atom="atom -n"
+alias a="atom -n"
+alias now='date +%Y%m%d%H%M'
 
 alias xn1="xargs -n 1"
 alias tree="tree --dirsfirst"
@@ -39,4 +41,9 @@ alias u3='cd ../../..'
 alias u4='cd ../../../..'
 alias u5='cd ../../../../..'
 
-alias svndiff='svn diff --force | colordiff | less -r'
+alias g='gedit'
+alias rebash='. ~/.bashrc'
+
+alias capturemessages="sudo tail -f /var/log/messages > var_log_messages_\$(now).txt"
+alias tailmessages="sudo tail -f /var/log/messages"
+alias grepmessages="sudo tail -f /var/log/messages | grep"

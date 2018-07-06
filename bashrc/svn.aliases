@@ -1,3 +1,12 @@
 alias svndiff='svn diff --force | colordiff | less -r'
 alias svntodo='svndiff | grep TODO'
+alias svnlog='svn log | less'
+
+function svn-rename ()
+{
+    OLD=$1;
+    NEW=$2;
+    mv $NEW $OLD;
+    svn mv $OLD $NEW;
+}
 

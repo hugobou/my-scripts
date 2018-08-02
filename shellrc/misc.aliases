@@ -5,9 +5,8 @@ alias la='ls -la -h'
 alias ll='ls -l -h'
 alias ss='ls -l -h'
 alias ls='ls --color'
-alias ls-l='ls -l'
 alias lt='ls -ltrh'
-alias +=pushd
+#alias +=pushd
 alias n="nautilus"
 alias nn="nautilus . &"
 alias cl=clear
@@ -21,10 +20,13 @@ alias mk="make"
 alias atom="atom -n"
 alias a="atom -n"
 alias now='date +%Y%m%d%H%M'
-
+alias lastfile='ls -1t | head -n 1'
 alias xn1="xargs -n 1"
 alias tree="tree --dirsfirst"
 alias cdpwd='cd `pwd`'
+
+alias removeyumlock='sudo rm -f /var/run/yum.pid'
+alias removetrailingwhitespace="sed -i 's/[ \t]*$//'"
 
 alias   ..='cd ..'
 alias  ...='cd ../..'

@@ -1,6 +1,8 @@
 alias svndiff='svn diff --force | colordiff | less -r'
 alias svntodo='svndiff | grep TODO'
 alias svnlog='svn log | less'
+alias svnuntracked='svn status | grep -e "^?" | cut  -c 9-'
+alias svnmodified='svn status | grep -e "^M" | cut  -c 9-'
 
 function svn-rename ()
 {

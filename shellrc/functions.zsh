@@ -25,6 +25,7 @@ function fv()
     $(get_editor) $(f $*)
 }
 
+unalias md ## Oh my zsh defines this alias
 function md ()
 {
     mkdir -p -- "$1" && cd -P -- "$1"
@@ -45,9 +46,10 @@ function svn-patch()
     PATCH_FOLDER="$HOME/Hugo/patches"
     SVNHEAD=`svn log | head -n 2 | tail -n 1 | cut -f 1 -d ' '`
     TITLE=$1
+    shift
     DATE=$(date "+%Y%m%d-%H%M")
     FILE=$PATCH_FOLDER/${TITLE}_${DATE}_${SVNHEAD}.patch
-    svn diff --force > $FILE
+    svn diff --force $* > $FILE
     echo "Created path $FILE"
 }
 

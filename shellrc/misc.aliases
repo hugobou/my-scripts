@@ -10,18 +10,19 @@ alias lt='ls -ltrh'
 alias n="nautilus"
 alias nn="nautilus . &"
 alias cl=clear
-alias x=xview
 alias d=display
 alias vi=vim
 alias m=more
-alias c=cd
 alias grep='grep --color=auto'
 alias mk="make"
 alias atom="atom -n"
 alias a="atom -n"
-alias now='date +%Y%m%d%H%M'
+alias c=code
+alias now='date +%Y%m%d%H%M%S'
+alias today='date +%Y%m%d'
 alias lastfile='ls -1t | head -n 1'
-alias xn1="xargs -n 1"
+alias x=xargs_bash_alias.sh # https://github.com/KiranMohan/scripts/blob/master/xargs_bash_alias.sh
+alias xn1="xargs_bash_alias.sh -n 1"
 alias tree="tree --dirsfirst"
 alias cdpwd='cd `pwd`'
 
@@ -45,6 +46,7 @@ alias u5='cd ../../../../..'
 
 alias g='gedit'
 alias rebash='. ~/.bashrc'
+alias rezsh='. ~/.zshrc'
 
 alias capturemessages="sudo tail -f /var/log/messages > var_log_messages_\$(now).txt"
 alias tailmessages="sudo tail -f /var/log/messages"

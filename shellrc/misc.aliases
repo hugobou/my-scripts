@@ -6,7 +6,6 @@ alias ll='ls -l -h'
 alias ss='ls -l -h'
 alias ls='ls --color'
 alias lt='ls -ltrh'
-#alias +=pushd
 alias n="nautilus"
 alias nn="nautilus . &"
 alias cl=clear
@@ -14,10 +13,10 @@ alias d=display
 alias vi=vim
 alias m=more
 alias grep='grep --color=auto'
-alias mk="make"
 alias atom="atom -n"
 alias a="atom -n"
-alias c=code
+alias c="code -n"
+alias g='gedit'
 alias now='date +%Y%m%d%H%M%S'
 alias today='date +%Y%m%d'
 alias lastfile='ls -1t | head -n 1'
@@ -44,10 +43,12 @@ alias u3='cd ../../..'
 alias u4='cd ../../../..'
 alias u5='cd ../../../../..'
 
-alias g='gedit'
 alias rebash='. ~/.bashrc'
 alias rezsh='. ~/.zshrc'
 
-alias capturemessages="sudo tail -f /var/log/messages > var_log_messages_\$(now).txt"
+function capturemessages() {
+    sudo tail -f /var/log/messages > var_log_messages_$(now)_"$1".txt
+}
+
 alias tailmessages="sudo tail -f /var/log/messages"
 alias grepmessages="sudo tail -f /var/log/messages | grep"

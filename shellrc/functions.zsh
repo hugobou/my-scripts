@@ -50,10 +50,19 @@ function svn-patch()
     DATE=$(date "+%Y%m%d-%H%M")
     FILE=$PATCH_FOLDER/${TITLE}_${DATE}_${SVNHEAD}.patch
     svn diff --force $* > $FILE
-    echo "Created path $FILE"
+    echo "$FILE"
 }
 
 function apply-patch()
 {
     patch -p 0 < $1
+}
+
+function refactor()
+{
+    if [ $# -eq 2 ]; then
+        grep_files -l "$1" | xargs sed -i "s/$1/$2/g"
+    else
+        echo Use exactly 2 arguments!
+    fi
 }

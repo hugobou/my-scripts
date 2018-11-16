@@ -1,8 +1,11 @@
 alias svndiff='svn diff --force | colordiff | less -r'
 alias svntodo='svndiff | grep TODO'
 alias svnlog='svn log | less'
+alias svntouched='svn status | cut  -c 9-'
 alias svnuntracked='svn status | grep -e "^?" | cut  -c 9-'
 alias svnmodified='svn status | grep -e "^M" | cut  -c 9-'
+alias svnadded='svn status | grep -e "^A" | cut  -c 9-'
+alias svncopyright='svn status | grep -e "^A" | cut -c 9- | xargs -n 1 sed -i "/Copyright/ s/20../$(date +%Y)/"'
 
 function svn-rename ()
 {

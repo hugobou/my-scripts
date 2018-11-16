@@ -52,3 +52,5 @@ function capturemessages() {
 
 alias tailmessages="sudo tail -f /var/log/messages"
 alias grepmessages="sudo tail -f /var/log/messages | grep"
+
+alias tabs24spaces="sed -i 's/\t/    /g'"

@@ -50,7 +50,7 @@ function svn-patch()
     DATE=$(date "+%Y%m%d-%H%M")
     FILE=$PATCH_FOLDER/${TITLE}_${DATE}_${SVNHEAD}.patch
     svn diff --force > $FILE
-    echo "Created path $FILE"
+    echo "$FILE"
 }
 
 function apply-patch()
